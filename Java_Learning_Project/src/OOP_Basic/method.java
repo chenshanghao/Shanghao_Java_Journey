@@ -6,7 +6,7 @@ public class method {
 		// TODO Auto-generated method stub
 		Person ming = new Person();
 		ming.setName("Shanghao Chen");
-		ming.setAge(12);
+		ming.setBirth(1989);
 		System.out.println(ming.getName() + ", " + ming.getAge());
 		
 	}
@@ -15,27 +15,39 @@ public class method {
 
 class Person{
 	private String name;
-	private	int age;
+//	private	int age;
+	private int birth;
 	
 	public String getName() {
 		return this.name;
 	}
 	
 	public void setName(String name) {
-		this.name = name;
+		if (name == null || name.isEmpty()) {
+			throw new IllegalArgumentException("invalid name");
+		}
+		this.name = name.trim();
+	}
+	
+	public void setBirth(int birth){
+		this.birth = birth;
 	}
 	
 	public int getAge() {
-		return this.age;
+		return calcAge(2019);
 	}
 	
-	public void setAge(int age) {
-		if (age < 10 || age > 100) {
-			throw new IllegalArgumentException("invalid age value");
-		}
-		this.age = age;
-		
+	private int calcAge(int currentYear) {
+		System.out.println("currentYear: " + currentYear + " birth:" + this.birth);
+		return currentYear - this.birth;
 	}
+	
+//	public void setAge(int age) {
+//		if (age < 10 || age > 100) {
+//			throw new IllegalArgumentException("invalid age value");
+//		}
+//		this.age = age;
+//	}
 	
 }
 
