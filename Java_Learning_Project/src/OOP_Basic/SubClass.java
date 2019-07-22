@@ -4,6 +4,16 @@ public class SubClass {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
+//		小结
+//		1) 继承是面向对象编程的一种强大的代码复用方式；
+//		2）Java只允许单继承，所有类最终的根类是Object；
+//		3) protected允许子类访问父类的字段和方法；
+//		4）子类的构造方法可以通过super()调用父类的构造方法；
+//		5) 可以安全地向上转型为更抽象的类型；
+//		6) 可以强制向下转型，最好借助instanceof判断；
+//		7) 子类和父类的关系是is，has关系不能用继承。
+		
 		Person_4 p = new Person_4("Shanghao", 30);
 		System.out.println("p is instance of Person_4: "+  (p instanceof Person_4));
 		
