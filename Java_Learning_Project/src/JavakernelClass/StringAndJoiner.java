@@ -27,9 +27,5 @@ public class StringAndJoiner {
 		
 		String sjoin = String.join(", ", names);
 		System.out.println(sjoin);
-		
-		
-		
 	}
-
 }
